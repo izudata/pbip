@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "bdb4a5d22d658125a60a",
+  "position": {
+    "x": 639.40182615572644,
+    "y": 136.17564867228424,
+    "z": 1000,
+    "height": 371.05183694011072,
+    "width": 629.46293766625922
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactInventory"
+                    }
+                  },
+                  "Property": "DateOfInventory"
+                }
+              },
+              "queryRef": "FactInventory.DateOfInventory",
+              "nativeQueryRef": "DateOfInventory",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProductType"
+                    }
+                  },
+                  "Property": "ProductTypeName"
+                }
+              },
+              "queryRef": "DimProductType.ProductTypeName",
+              "nativeQueryRef": "ProductTypeName"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProductType"
+                    }
+                  },
+                  "Property": "ProductTypeCode"
+                }
+              },
+              "queryRef": "DimProductType.ProductTypeCode",
+              "nativeQueryRef": "ProductTypeCode"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactInventory"
+                        }
+                      },
+                      "Property": "InventoryLevel"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactInventory.InventoryLevel)",
+              "nativeQueryRef": "Sum of InventoryLevel"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Date'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'What was the inventory level over time?'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
