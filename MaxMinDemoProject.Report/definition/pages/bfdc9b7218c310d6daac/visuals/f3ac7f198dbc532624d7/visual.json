@@ -1,0 +1,181 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "f3ac7f198dbc532624d7",
+  "position": {
+    "x": 13.251851319289669,
+    "y": 477.066647494428,
+    "z": 3001,
+    "height": 212.0296211086347,
+    "width": 1255.612912502696,
+    "tabOrder": 3001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProductType"
+                    }
+                  },
+                  "Property": "ProductTypeName"
+                }
+              },
+              "queryRef": "DimProductType.ProductTypeName",
+              "nativeQueryRef": "Product Type",
+              "displayName": "Product Type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactManufacturing"
+                        }
+                      },
+                      "Property": "AcceptedProducts"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactManufacturing.AcceptedProducts)",
+              "nativeQueryRef": "Number of Accepted Products",
+              "displayName": "Number of Accepted Products"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactManufacturing"
+                        }
+                      },
+                      "Property": "RejectedProducts"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactManufacturing.RejectedProducts)",
+              "nativeQueryRef": "Number of of Rejected Products",
+              "displayName": "Number of of Rejected Products"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01MeasureTable"
+                    }
+                  },
+                  "Property": "Total Products"
+                }
+              },
+              "queryRef": "01MeasureTable.Total Products",
+              "nativeQueryRef": "Total Products"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01MeasureTable"
+                    }
+                  },
+                  "Property": "Rejected Percent"
+                }
+              },
+              "queryRef": "01MeasureTable.Rejected Percent",
+              "nativeQueryRef": "Rejected Percent"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "228.60283578472945D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FactManufacturing.AcceptedProducts)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "244.33033873383758D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FactManufacturing.RejectedProducts)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "389.493369171812D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DimProductType.ProductTypeName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "170.74949327772146D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01MeasureTable.Total Products"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "156.52806471883164D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01MeasureTable.Rejected Percent"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
