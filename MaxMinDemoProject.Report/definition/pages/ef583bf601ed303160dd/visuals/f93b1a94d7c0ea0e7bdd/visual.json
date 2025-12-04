@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 344.54813430153138,
-    "width": 594.67682795312385
+    "width": 594.67682795312385,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -238,53 +239,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "bd7466a4e714404ba0dc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimProductType"
-              }
-            },
-            "Property": "ProductTypeName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c9e2b73d9307acd3377a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "FactInventory"
-                  }
-                },
-                "Property": "InventoryLevel"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "182d905989b01301db38",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimProductType"
-              }
-            },
-            "Property": "ProductTypeCode"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "2478656faaa1a8ae9a83",
         "field": {
