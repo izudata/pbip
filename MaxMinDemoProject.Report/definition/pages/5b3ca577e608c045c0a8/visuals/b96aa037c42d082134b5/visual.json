@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "e00bf746c37448e54088",
+  "name": "b96aa037c42d082134b5",
   "position": {
     "x": 954.133294988856,
     "y": 11.59536990437846,
-    "z": 3000,
+    "z": 2000,
     "height": 97.7324034797613,
     "width": 293.19721043928388
   },
@@ -19,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "FactInventory"
+                      "Entity": "DimDate"
                     }
                   },
-                  "Property": "DateOfInventory"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "FactInventory.DateOfInventory",
-              "nativeQueryRef": "DateOfInventory",
+              "queryRef": "DimDate.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -39,10 +39,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "FactInventory"
+                    "Entity": "DimDate"
                   }
                 },
-                "Property": "DateOfInventory"
+                "Property": "Date"
               }
             },
             "direction": "Ascending"
@@ -65,7 +65,7 @@
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2015-12-30T00:00:00'"
+                  "Value": "datetime'2015-12-31T00:00:00'"
                 }
               }
             },
@@ -87,8 +87,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "f",
-                    "Entity": "FactInventory",
+                    "Name": "d",
+                    "Entity": "DimDate",
                     "Type": 0
                   }
                 ],
@@ -103,10 +103,10 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "f"
+                                    "Source": "d"
                                   }
                                 },
-                                "Property": "DateOfInventory"
+                                "Property": "Date"
                               }
                             },
                             "Right": {
@@ -123,15 +123,15 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "f"
+                                    "Source": "d"
                                   }
                                 },
-                                "Property": "DateOfInventory"
+                                "Property": "Date"
                               }
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2015-12-31T00:00:00'"
+                                "Value": "datetime'2016-01-01T00:00:00'"
                               }
                             }
                           }
@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Inventory Date'"
+                  "Value": "'Date'"
                 }
               }
             }
@@ -160,5 +160,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d1ea77cb5a81d90a0c88",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimDate"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

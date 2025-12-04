@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "bdb4a5d22d658125a60a",
+  "name": "c69f8c8808a20a49e69c",
   "position": {
-    "x": 639.40182615572644,
-    "y": 136.17564867228424,
-    "z": 1000,
-    "height": 371.05183694011072,
-    "width": 629.46293766625922,
+    "x": 689.54513413774521,
+    "y": 122.28386615250653,
+    "z": 5000,
+    "height": 584.24513828419788,
+    "width": 579.14997719451014,
     "tabOrder": 3000
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "FactInventory"
+                      "Entity": "DimDate"
                     }
                   },
-                  "Property": "DateOfInventory"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "FactInventory.DateOfInventory",
-              "nativeQueryRef": "DateOfInventory",
+              "queryRef": "DimDate.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -127,6 +127,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "smallMultiplesLayout": [
+        {
+          "properties": {
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "4L"
                 }
               }
             }

@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "9b740d9cbe630de7b3ae",
+  "name": "b15fc3edbe0e4a531052",
   "position": {
-    "x": 13.251851319289669,
-    "y": 136.17564867228424,
-    "z": 2000,
-    "height": 371.05183694011072,
-    "width": 612.89812351714716,
+    "x": 13.086859281573782,
+    "y": 203.58579498767494,
+    "z": 1000,
+    "height": 314.08462275777077,
+    "width": 663.69072070838467,
     "tabOrder": 1000
   },
   "visual": {
@@ -227,7 +227,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'What was the inventory on Jan 1, 2013?'"
+                  "Value": "'What was the inventory level on that date?'"
                 }
               }
             }
@@ -236,63 +236,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2478656faaa1a8ae9a83",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "FactInventory"
-              }
-            },
-            "Property": "DateOfInventory"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "FactInventory",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "DateOfInventory"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2013-01-01T00:00:00'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
   }
 }
