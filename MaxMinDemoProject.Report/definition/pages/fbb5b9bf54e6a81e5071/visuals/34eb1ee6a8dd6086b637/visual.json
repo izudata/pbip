@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "34eb1ee6a8dd6086b637",
+  "position": {
+    "x": 9.629037566411208,
+    "y": 0,
+    "z": 0,
+    "height": 286.94531947905404,
+    "width": 562.33579387841462
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01MeasureTable"
+                    }
+                  },
+                  "Property": "Rejected Percent"
+                }
+              },
+              "queryRef": "01MeasureTable.Rejected Percent",
+              "nativeQueryRef": "Rejected Product Percentage for 2015",
+              "displayName": "Rejected Product Percentage for 2015"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01MeasureTable"
+                  }
+                },
+                "Property": "Rejected Percent"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3093150c38b09a81b638",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01MeasureTable"
+              }
+            },
+            "Property": "Rejected Percent"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
